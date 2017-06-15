@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transparentify</title>
+  <style>
+    .container-fluid {
+      display: block;
+      width: 100%;
+      padding: 0 1.5em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <header>
+      <h1>Your dropbox code.</h1>
+    </header>
+    <div class="container">
+      <p>Code: <span id="for-code"></span></p>
+    </div>
+  </div>
+  <script>
+    window.onload = () => {
+      let userCode = location.search.replace(/\?code=/gi,'');
+
+      document.getElementById('for-code').innerHTML = userCode;
+    };
+  </script>
+</body>
+</html>
