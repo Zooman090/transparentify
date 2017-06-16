@@ -4,20 +4,59 @@
   <meta charset="UTF-8">
   <title>Transparentify</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     .container-fluid {
-      display: block;
       width: 100%;
-      padding: 0 1.5em;
+      background-color: rgb(237, 238, 240);
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+    .header {
+      padding: 2em;
+      background-color: rgba(34, 140, 219, 0.87);
+      box-shadow: -1px 0px 16px rgb(0, 0, 0);
+    }
+    .header .h1-code {
+      margin: 0;
+      font-size: 2em;
+    }
+    div.container {
+      width: 80%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      padding: 7em 0 3em 0;
+      margin: auto;
+      height: 100%;
+    }
+    .container-for-code {
+      height: 100%;
+      padding: 2em;
+      background-color: #fff;
+    }
+    .p-text-for-code {
+      font-size: 2em;
+      margin: 0;
+    }
+    .for-code {
+      color: rgba(34, 140, 219, 0.87);
     }
   </style>
 </head>
 <body>
   <div class="container-fluid">
-    <header>
-      <h1>Your dropbox code.</h1>
+    <header class="header">
+      <h1 class="h1-code">Your dropbox code.</h1>
     </header>
     <div class="container">
-      <p>Code: <span id="for-code"></span></p>
+      <div class="container-for-code">
+        <p class="p-text-for-code">Code: <span class="for-code" id="for-code"></span></p>
+      </div>
     </div>
   </div>
   <script>
