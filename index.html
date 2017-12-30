@@ -86,7 +86,7 @@
         $("div.custom-menu").hide();
         $("<div class='custom-menu'>Copy</div>")
           .appendTo("body")
-          .css({top: (event.pageY*1 + 8) + "px", left: (event.pageX*1 + 8) + "px"});
+          .css({top: (event.pageY*1 + 8) + 'px', left: (event.pageX*1 + 8) + "px"});
       });
       $(document).bind("click", function(event) {
         document.execCommand('copy');
